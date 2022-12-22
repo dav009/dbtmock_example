@@ -1,3 +1,25 @@
+## dbtmock sample project
+
+- This a fork of the vanilla `jaffle_store` project,  which is the `hello world` of dbt
+- This fork is a sample project using [dbtmock](https://github.com/dav009/dbtmock)
+- This fork has a few changes:
+ - `unit_tests` folder with a sample `test.json`
+ - some mock data as csv: `mocked_data/output.csv` as a dataset to assert the final output of the given test
+- it uses already given `csv` files as mocked data
+
+
+You can use this fork to run `dbtmock`
+
+1. Clone the project `git clone ..`
+2. Create a `profile.yml` with your BigQuery settings
+3. Run `dbt seed`
+4. Run `dbt compile`
+5. Run `dbtmock` (no arguments needed)
+6. See test generated in : `tests/dummy_test.sql`
+7. Run `dbt test` see in the output the result: `START test dummy_test.. PASS dummy_test`
+
+
+
 ## Testing dbt project: `jaffle_shop`
 
 `jaffle_shop` is a fictional ecommerce store. This dbt project transforms raw data from an app database into a customers and orders model ready for analytics.
